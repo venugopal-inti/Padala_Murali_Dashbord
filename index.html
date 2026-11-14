@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Padala Sai Murali – Mechanical Maintenance Technician</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0A2540;--bg2:#0E2F52;--line:rgba(190,215,240,.22);--ink:#EAF2FA;--dim:#A9BFD4;--acc:#FFC21A;--accd:#1B1300;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0A2540}}
+:root[data-theme="dark"]{--bg:#0A2540}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.7 'IBM Plex Sans',system-ui,sans-serif;overflow-x:hidden;
+background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:48px 48px;background-attachment:fixed;background-blend-mode:soft-light}
+h1,h2,h3,.brand{font-family:'Barlow Condensed','Arial Narrow',sans-serif;font-weight:700;line-height:1.02}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;padding:calc(env(safe-area-inset-top,0px) + 12px) 24px 12px;display:flex;justify-content:space-between;align-items:center;background:rgba(10,37,64,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.brand{font-size:1.4rem;letter-spacing:.02em}
+nav ul{display:flex;gap:26px;list-style:none;font-size:.92rem}
+nav a{text-decoration:none;color:var(--dim);transition:color .2s}nav a:hover{color:var(--acc)}
+main>section{max-width:1080px;margin:0 auto;padding:96px 24px}
+.hero{min-height:100vh;display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;padding-top:110px!important}
+.hero h1{font-size:clamp(3.4rem,9vw,7rem);letter-spacing:-.01em}
+.role{font-size:1.15rem;color:var(--acc);margin:14px 0 20px;font-weight:500}
+.hero p.lead{color:var(--dim);max-width:52ch}
+.hero .in{opacity:0;transform:translateY(16px);animation:in .8s cubic-bezier(.2,.7,.2,1) forwards}
+.hero .in:nth-child(2){animation-delay:.12s}.hero .in:nth-child(3){animation-delay:.24s}.hero .in:nth-child(4){animation-delay:.36s}
+@keyframes in{to{opacity:1;transform:none}}
+.stats{display:flex;gap:34px;margin:30px 0;flex-wrap:wrap}
+.stats b{display:block;font:700 2.4rem/1 'Barlow Condensed';color:var(--ink)}.stats span{font-size:.85rem;color:var(--dim)}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:12px 22px;border-radius:2px;text-decoration:none;font-weight:600;font-size:.92rem;border:1.5px solid var(--acc);transition:transform .15s,background .2s}
+.btn.p{background:var(--acc);color:var(--accd)}.btn.p:hover{transform:translateY(-2px)}.btn.s{color:var(--acc)}.btn.s:hover{background:rgba(255,194,26,.12)}
+.gears{width:100%;height:auto;max-height:520px}
+.gears .gear{fill:rgba(255,194,26,.1);stroke:var(--acc);stroke-width:2;fill-rule:evenodd}
+.gears .cl{stroke:var(--dim);stroke-width:1;stroke-dasharray:8 5 2 5;fill:none;opacity:.7}
+.gears text{fill:var(--dim);font:500 11px 'IBM Plex Sans'}
+.belt{height:46px;position:relative;overflow:hidden;border-block:1px solid var(--line);background:var(--bg2)}
+.belt::before{content:"";position:absolute;inset:auto 0 8px;height:6px;background:repeating-linear-gradient(90deg,var(--dim) 0 14px,transparent 14px 28px);opacity:.5;animation:belt 1.2s linear infinite}
+.belt i{position:absolute;bottom:14px;width:22px;height:18px;background:var(--acc);border-radius:1px;animation:box 9s linear infinite}
+.belt i:nth-child(2){animation-delay:-3s;width:30px}.belt i:nth-child(3){animation-delay:-6s;height:24px}
+@keyframes belt{to{background-position:28px 0}}@keyframes box{from{left:-60px}to{left:100%}}
+h2{font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:12px}
+.sub{color:var(--dim);max-width:56ch;margin-bottom:44px}
+.about{display:grid;grid-template-columns:1.2fr 1fr;gap:56px}
+.about p{color:var(--dim);margin-bottom:16px}
+dl div{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+dt{width:120px;flex:none;color:var(--dim);font-size:.88rem}dd{font-weight:500}
+.tl{position:relative;padding-left:44px}
+.tl::before{content:"";position:absolute;left:11px;top:6px;bottom:0;width:2px;background:linear-gradient(var(--acc),var(--line))}
+.job{position:relative;padding-bottom:48px}
+.job svg.node{position:absolute;left:-44px;top:0;width:24px;height:24px}
+.node path{fill:var(--bg);stroke:var(--acc);stroke-width:1.6;fill-rule:evenodd}
+.job.now .node{animation:spin 6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.when{font-size:.88rem;color:var(--acc);font-weight:600}
+.job h3{font-size:1.9rem;margin:4px 0 2px}.job .r{color:var(--ink);font-weight:500}.job .w{color:var(--dim);font-size:.88rem;margin-bottom:10px}
+.job p{color:var(--dim);max-width:66ch}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.tags span{border:1px solid var(--line);padding:3px 11px;font-size:.8rem;color:var(--dim);border-radius:2px}
+.press{display:flex;gap:20px;align-items:center;margin-top:18px;padding:14px 18px;border:1px dashed var(--line);max-width:420px}
+.press svg{width:70px;flex:none}.press small{color:var(--dim);font-size:.85rem}
+.ram{animation:ram 3.2s cubic-bezier(.6,0,.4,1) infinite}
+@keyframes ram{0%,100%{transform:translateY(0)}50%{transform:translateY(34px)}}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:40px 36px}
+.skills h3{font-size:1.5rem;padding-bottom:8px;border-bottom:2px solid var(--acc);margin-bottom:12px}
+.skills ul{list-style:none;color:var(--dim);font-size:.93rem}.skills li{padding:3px 0}
+.contact{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end;border-top:1px solid var(--line);padding-top:48px}
+.contact dl div{border:0;padding:6px 0}.contact dt{width:90px}
+.contact .btns{flex-direction:column}
+footer{text-align:center;padding:28px 24px 90px;color:var(--dim);font-size:.82rem;border-top:1px solid var(--line)}
+#sg{position:fixed;right:18px;bottom:calc(env(safe-area-inset-bottom,0px) + 18px);width:56px;height:56px;z-index:15;opacity:.9}
+#sg path{fill:var(--bg);stroke:var(--acc);stroke-width:1.6;fill-rule:evenodd}
+.docs{display:flex;flex-direction:column;gap:16px}.doc{border:1px solid var(--line);background:var(--bg2)}
+.dh{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:6px 22px 6px 0;flex-wrap:wrap}
+.tg{flex:1;min-width:240px;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 22px;background:none;border:0;color:inherit;font:inherit;text-align:left;cursor:pointer}
+.tg .t{display:block;font:700 1.6rem/1.1 'Barlow Condensed',sans-serif}.tg small{color:var(--dim)}
+.arr{color:var(--acc);font-size:.85rem;transition:transform .3s}.doc.open .arr{transform:rotate(180deg)}
+.acts{display:flex;gap:6px;align-items:center}.acts .go{padding:0 0 0 16px}.go{color:var(--acc);font-size:.88rem;font-weight:600;text-decoration:none;padding:0 0 0 22px}.go:hover{text-decoration:underline}
+.emb{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s ease}.doc.open .emb{grid-template-rows:1fr}.emb>div{overflow:hidden}
+.emb iframe{width:100%;height:700px;border:0;background:#fff;display:block}
+@media(max-width:520px){.emb iframe{height:480px}}
+@media(max-width:820px){.hero,.about,.contact{grid-template-columns:1fr}.skills{grid-template-columns:1fr 1fr}nav ul{display:none}.gears{max-height:300px}}
+@media(max-width:520px){.skills{grid-template-columns:1fr}}
+#ld{position:fixed;inset:0;z-index:100;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;padding:24px;transition:opacity .6s,visibility .6s}
+#ld.off{opacity:0;visibility:hidden}
+#ld svg,#ld .belt,.lbar,#ld p{width:min(320px,80vw)}
+.lg path{fill:rgba(255,194,26,.12);stroke:var(--acc);stroke-width:2;fill-rule:evenodd}
+.sp{transform-origin:0 0}.sp.a{animation:spin 8s linear infinite}.sp.b{animation:spinr 4s linear infinite}
+@keyframes spinr{to{transform:rotate(-360deg)}}
+.lbar{height:6px;border:1px solid var(--line)}.lbar i{display:block;height:100%;width:0;background:var(--acc)}
+#ld p{color:var(--dim);font-size:.9rem;display:flex;justify-content:space-between}
+body:not(.ready){overflow:hidden}body:not(.ready) .hero .in{animation-play-state:paused}
+.ow{display:inline-block;margin-top:10px;padding:3px 12px;border:1px solid var(--acc);color:var(--acc);font-size:.85rem;border-radius:2px}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important}.hero .in{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div id="ld" role="status" aria-label="Loading portfolio">
+  <div class="brand">Padala Sai Murali</div>
+  <svg viewBox="0 0 260 160" aria-hidden="true"><g class="lg"><g transform="translate(90 80)"><g class="sp a"><path id="lga" transform="rotate(-5.85)"/></g></g><g transform="translate(159 80)"><g class="sp b"><path id="lgb" transform="rotate(150.3)"/></g></g></g></svg>
+  <div class="belt" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="lbar"><i id="lb"></i></div>
+  <p><span id="lt">Lubricating bearings…</span><span id="lp">0%</span></p>
+</div>
+<nav>
+  <a class="brand" href="#top" style="text-decoration:none">Padala Sai Murali</a>
+  <ul><li><a href="#about">About</a></li><li><a href="#experience">Experience</a></li><li><a href="#skills">Skills</a></li><li><a href="#documents">Documents</a></li><li><a href="#contact">Contact</a></li></ul>
+</nav>
+
+<main id="top">
+<section class="hero">
+  <div>
+    <p class="role in">Mechanical Maintenance Technician · GMP Compliance<br><span class="ow">Open to work: available for new roles</span></p>
+    <h1 class="in">Padala<br>Sai Murali</h1>
+    <p class="lead in">7+ years keeping production lines running: cashew processing in Andhra Pradesh, 1000-ton hydraulic presses in Telangana, and GMP-certified food manufacturing in the UAE.</p>
+    <div class="in">
+      <div class="stats"><div><b>7+</b><span>Years of experience</span></div><div><b>5</b><span>Companies</span></div><div><b>1000 t</b><span>Largest press maintained</span></div></div>
+      <div class="btns"><a class="btn p" href="#contact">Get in touch</a><a class="btn s" href="#experience">View experience</a></div>
+    </div>
+  </div>
+  <svg class="gears" viewBox="0 0 460 400" role="img" aria-label="Two meshing gears turning">
+    <line class="cl" x1="150" y1="40" x2="150" y2="360"/><line class="cl" x1="20" y1="200" x2="420" y2="200"/><line class="cl" x1="318" y1="110" x2="318" y2="290"/>
+    <path id="ga" class="gear"/><path id="gb" class="gear"/>
+    <text x="150" y="388" text-anchor="middle">Z = 24</text><text x="318" y="304" text-anchor="middle">Z = 12 · ratio 2:1</text>
+  </svg>
+</section>
+<div class="belt" aria-hidden="true"><i></i><i></i><i></i></div>
+
+<section id="about">
+  <h2>Keeping lines moving</h2>
+  <p class="sub">ITI-trained fitter with experience across food, steel and industrial processing.</p>
+  <div class="about">
+    <div>
+      <p>I hold an ITI certification from Minerva Institute (2017, 89% aggregate) and began in the paper industry before moving into specialised mechanical maintenance across Andhra Pradesh, Telangana and the UAE.</p>
+      <p>My strength is pairing preventive maintenance with fast breakdown response. I work comfortably with conveyors, hydraulic presses, pneumatic networks, VRV AC systems and food-grade GMP environments, and I document every intervention to audit-ready standard.</p>
+    </div>
+    <dl>
+      <div><dt>Education</dt><dd>ITI, Minerva Institute, 2017</dd></div>
+      <div><dt>Status</dt><dd>Open to work, looking for a new role</dd></div>
+      <div><dt>Home</dt><dd>Kirlampudi, East Godavari, Andhra Pradesh</dd></div>
+      <div><dt>Focus</dt><dd>GMP compliance, preventive maintenance, pneumatics</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Work experience</h2>
+  <p class="sub">Critical production assets across India and the UAE.</p>
+  <div class="tl">
+    <article class="job"><svg class="node n" viewBox="0 0 24 24"></svg>
+      <div class="when">Jul 2024 – Jul 2026</div><h3>Fanar Al Khaleej</h3><div class="r">Maintenance Technician</div><div class="w">Umm Al Quwain, UAE</div>
+      <p>Managed the lifecycle of production assets from 50 kg to 1000 kg blending machines and VMC packing systems. Maintained metal detectors, screw conveyors and pneumatic networks, ran VRV AC servicing, and kept audit-ready GMP records for every intervention.</p>
+      <div class="tags"><span>GMP compliance</span><span>Blending machines</span><span>VMC packing</span><span>Pneumatics</span><span>VRV AC</span><span>Metal detectors</span></div></article>
+    <article class="job"><svg class="node n" viewBox="0 0 24 24"></svg>
+      <div class="when">Dec 2023 – Jun 2024</div><h3>Pitti Engineering Limited</h3><div class="r">Mechanical Technician, Maintenance</div><div class="w">Kothur, Telangana</div>
+      <p>Maintained 50-ton to 1000-ton hydraulic presses, sheet metal cutting machines and coil process lines. Operated EOT cranes, managed pneumatic controls, and handled troubleshooting, calibration and system upgrades to safety standards.</p>
+      <div class="press" aria-hidden="true"><svg viewBox="0 0 70 100"><rect x="4" y="4" width="62" height="8" fill="none" stroke="#FFC21A" stroke-width="2"/><g class="ram"><rect x="31" y="12" width="8" height="26" fill="#A9BFD4"/><rect x="18" y="38" width="34" height="9" fill="#FFC21A"/></g><rect x="10" y="84" width="50" height="10" fill="none" stroke="#FFC21A" stroke-width="2"/><rect x="4" y="12" width="3" height="80" fill="#A9BFD4"/><rect x="63" y="12" width="3" height="80" fill="#A9BFD4"/></svg><small>Press lines up to 1000 t</small></div>
+      <div class="tags"><span>Hydraulic press 50–1000 T</span><span>EOT cranes</span><span>Coil lines</span><span>Pneumatic control</span></div></article>
+    <article class="job"><svg class="node n" viewBox="0 0 24 24"></svg>
+      <div class="when">Jun 2023 – Dec 2023</div><h3>Hindustan Foods Pvt. Limited</h3><div class="r">Mechanical Technician</div><div class="w">Balanagar, Hyderabad</div>
+      <p>Breakdown response and preventive maintenance on PVC belt conveyors, vibrator machines, screw conveyors, centrifugal pumps, chemical mixers and packing machinery. Handled CCP machinery, GMP checkpoints, welding, drilling, tapping and precision measuring.</p>
+      <div class="tags"><span>Belt conveyors</span><span>Rotary pumps</span><span>CCP machinery</span><span>Welding and tapping</span></div></article>
+    <article class="job"><svg class="node n" viewBox="0 0 24 24"></svg>
+      <div class="when">Sep 2019 – Jun 2023</div><h3>Intersnack Cashew India Pvt. Ltd.</h3><div class="r">Mechanical Fitter, Maintenance</div><div class="w">Rajahmundry, Andhra Pradesh</div>
+      <p>Maintained the full cashew line from raw nut handling to packaging: shell cutters, kernel peelers, bucket elevators, roasting, cooling and colour sorting units. Bearing lubrication, belt tensioning, gearbox servicing and custom fabrication.</p>
+      <div class="tags"><span>Cashew processing line</span><span>Bucket elevators</span><span>Gearboxes</span><span>Fabrication</span></div></article>
+    <article class="job"><svg class="node n" viewBox="0 0 24 24"></svg>
+      <div class="when">Aug 2017 – Jan 2018</div><h3>Seven Hills Paper Pvt. Ltd.</h3><div class="r">Maintenance Assistant (Training)</div><div class="w">G. Ragampeta, Andhra Pradesh</div>
+      <p>Hands-on training in assembling, installing, maintaining and repairing industrial machinery, combining theory with workshop practice.</p></article>
+  </div>
+</section>
+<div class="belt" aria-hidden="true"><i></i><i></i><i></i></div>
+
+<section id="skills">
+  <h2>Technical skills</h2>
+  <p class="sub">Built across food, steel and processing plants.</p>
+  <div class="skills">
+    <div><h3>Mechanical systems</h3><ul><li>Hydraulic presses, 50 T to 1000 T</li><li>Gears, bearings, shafts, chains</li><li>Bucket elevators and conveyors</li><li>EOT cranes, coil lines</li><li>Gearbox servicing</li></ul></div>
+    <div><h3>Preventive maintenance</h3><ul><li>Scheduled inspection and lubrication</li><li>Belt tensioning, bearing replacement</li><li>Equipment calibration</li><li>Breakdown recovery, root cause</li></ul></div>
+    <div><h3>Pneumatics and fluids</h3><ul><li>Pneumatic network management</li><li>Centrifugal rotary pumps</li><li>Liquid pipelines</li><li>VRV AC servicing</li></ul></div>
+    <div><h3>Food and GMP</h3><ul><li>GMP-validated protocols</li><li>CCP machinery</li><li>VMC packing, blending machines</li><li>Metal detector calibration</li></ul></div>
+    <div><h3>Fabrication and tools</h3><ul><li>Welding, drilling, tapping</li><li>Custom component fabrication</li><li>Sheet metal cutting machines</li><li>Vernier callipers</li></ul></div>
+    <div><h3>Documentation</h3><ul><li>Maintenance logs, work orders</li><li>GMP intervention records</li><li>Spare parts tracking</li><li>Shift handover reports</li></ul></div>
+  </div>
+</section>
+
+<section id="documents">
+  <h2>Documents</h2>
+  <p class="sub">Open a document to read it here, or download a copy.</p>
+  <div class="docs">
+    <div class="doc"><div class="dh"><button class="tg" aria-expanded="false" aria-controls="e-resume"><span><span class="t">Resume / CV</span><small>Full career resume</small></span><span class="arr" aria-hidden="true">▼</span></button><div class="acts"><a class="go" href="resume.pdf" target="_blank" rel="noopener">Open</a><a class="go" href="resume.pdf" download="Padala_Saimurali_Resume.pdf">Download</a></div></div><div class="emb" id="e-resume"><div><iframe data-src="resume.pdf" title="Resume / CV"></iframe></div></div></div>
+    <div class="doc"><div class="dh"><button class="tg" aria-expanded="false" aria-controls="e-intersnack"><span><span class="t">Intersnack Cashew India Pvt. Ltd.</span><small>Service certificate · Sep 2019 – Jun 2023 · Rajahmundry</small></span><span class="arr" aria-hidden="true">▼</span></button><div class="acts"><a class="go" href="intersnack_certificate.pdf" target="_blank" rel="noopener">Open</a><a class="go" href="intersnack_certificate.pdf" download="Intersnack_Experience_Letter.pdf">Download</a></div></div><div class="emb" id="e-intersnack"><div><iframe data-src="intersnack_certificate.pdf" title="Intersnack Cashew India Pvt. Ltd."></iframe></div></div></div>
+    <div class="doc"><div class="dh"><button class="tg" aria-expanded="false" aria-controls="e-pitti"><span><span class="t">Pitti Engineering Limited</span><small>Appointment letter · Dec 2023 – Jun 2024 · Kothur, Telangana</small></span><span class="arr" aria-hidden="true">▼</span></button><div class="acts"><a class="go" href="pitti_appointment.pdf" target="_blank" rel="noopener">Open</a><a class="go" href="pitti_appointment.pdf" download="Pitti_Engineering_Appointment_Letter.pdf">Download</a></div></div><div class="emb" id="e-pitti"><div><iframe data-src="pitti_appointment.pdf" title="Pitti Engineering Limited"></iframe></div></div></div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Let’s talk</h2>
+  <p class="sub">Open to maintenance and mechanical technician roles in India and abroad.</p>
+  <div class="contact">
+    <dl>
+      <div><dt>Mobile</dt><dd>+91 9154221292</dd></div>
+      <div><dt>Email</dt><dd>saimuralipadala143@gmail.com</dd></div>
+      <div><dt>Home</dt><dd>Kirlampudi, East Godavari, AP 533431</dd></div>
+      <div><dt>Status</dt><dd>Open to work</dd></div>
+    </dl>
+    <div class="btns"><a class="btn p" href="mailto:saimuralipadala143@gmail.com">Send email</a><a class="btn s" href="tel:+919154221292">Call now</a><a class="btn s" href="https://www.linkedin.com/in/sai-murali-padala-5b3a6a240/" target="_blank" rel="noopener">LinkedIn profile</a></div>
+  </div>
+</section>
+</main>
+<footer>© 2026 Padala Sai Murali · Mechanical Maintenance Technician</footer>
+<svg id="sg" viewBox="-30 -30 60 60" aria-hidden="true"><path id="sgp"/></svg>
+
+<script>
+function gp(r,n,h,hole){var s=2*Math.PI/n,R=r-h,d='',p=[[.05,R],[.2,r],[.45,r],[.6,R]];
+for(var i=0;i<n;i++)p.forEach(function(q,j){var a=(i+q[0])*s;d+=(i+j?'L':'M')+(q[1]*Math.cos(a)).toFixed(1)+' '+(q[1]*Math.sin(a)).toFixed(1)}) ;
+d+='Z';if(hole)d+='M'+hole+' 0A'+hole+' '+hole+' 0 1 0 -'+hole+' 0A'+hole+' '+hole+' 0 1 0 '+hole+' 0Z';return d}
+document.getElementById('ga').setAttribute('d',gp(120,24,16,26));
+document.getElementById('gb').setAttribute('d',gp(64,12,16,14));
+document.getElementById('sgp').setAttribute('d',gp(26,12,6,8));
+document.querySelectorAll('.n').forEach(function(s){s.innerHTML='<g transform="translate(12 12)"><path d="'+gp(10,8,3,3)+'"/></g>';s.style.transformOrigin='12px 12px'});
+var A=document.getElementById('ga'),B=document.getElementById('gb'),S=document.getElementById('sgp'),sg=document.getElementById('sg'),th=0,last=scrollY,
+mq=matchMedia('(prefers-reduced-motion:reduce)');
+function draw(){A.setAttribute('transform','translate(150 200) rotate('+(th-4.9)+')');B.setAttribute('transform','translate(318 200) rotate('+(155.25-2*th)+')');sg.style.transform='rotate('+(scrollY*.4)+'deg)'}
+function tick(){var dy=scrollY-last;last=scrollY;th+=.25+Math.min(Math.abs(dy),60)*.08;draw();if(!mq.matches)requestAnimationFrame(tick)}
+draw();if(!mq.matches)requestAnimationFrame(tick);
+addEventListener('scroll',function(){if(mq.matches)draw()},{passive:true});
+document.querySelectorAll('.tg').forEach(function(b){b.addEventListener('click',function(){var d=b.closest('.doc'),o=d.classList.toggle('open'),f=d.querySelector('iframe');b.setAttribute('aria-expanded',o);if(o&&!f.src)f.src=f.dataset.src})});
+document.getElementById('lga').setAttribute('d',gp(50,20,8,11));
+document.getElementById('lgb').setAttribute('d',gp(27,10,8,6));
+var ld=document.getElementById('ld'),bar=document.getElementById('lb'),pc=document.getElementById('lp'),lt=document.getElementById('lt'),
+msgs=['Lubricating bearings…','Tensioning belts…','Calibrating sensors…','Machine running'],t0=performance.now(),loaded=document.readyState==='complete',dur=mq.matches?300:2800;
+addEventListener('load',function(){loaded=true});
+(function L(){var p=Math.min((performance.now()-t0)/dur,1);if(!loaded)p=Math.min(p,.92);var v=Math.round(p*100);bar.style.width=v+'%';pc.textContent=v+'%';lt.textContent=msgs[Math.min(3,Math.floor(p*4))];
+if(p>=1){ld.classList.add('off');document.body.classList.add('ready');setTimeout(function(){ld.remove()},700);return}requestAnimationFrame(L)})();
+</script>
+</body>
+</html>
